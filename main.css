@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.questions {
+  width: 600px;
+  border: 1px solid #ddd;
+  margin: auto;
+  padding: 1rem;
+}
+.questions div {
+  margin-block: 20px;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <title>TransPerfect Test</title>
+  </head>
+  <body>
+    <div class="questions">
+      <h2>Question 1</h2>
+      <!-- First Question -->
+      <div class="question-1">
+        Explain the difference between Components and PureComeponents in react:
+      </div>
+
+      <div class="answer-1">
+        A React component is considered pure if it render same output for the
+        same state and props. For example, there is a type of class component,
+        this component React provides as a PureComponent base class. Class
+        components that extend the React.PureComponent class are treated as pure
+        components. Here's the example of pure components; React uses Pure
+        Components to provide optimizations. Pure Component Class compares
+        current state and props with new props and states to decide whether the
+        component should re-render or Not.
+
+        <p>
+          The biggest difference between React pure component vs a regular React
+          component is that a React component doesn't implement
+          shouldComponentUpdate() by default.
+        </p>
+
+        <br /><br />
+        <div class="example-1">
+          import React from 'react'; <br />
+          class Users extends React.PureComponent {
+          <br />
+          render() { <br />
+          const { name, username, phone } = this.props; } <br />
+          return (
+          <Fragment>
+            <p>Name: {name}</p>
+            <p>Username: {username}</p>
+          </Fragment>
+          ) }
+        </div>
+      </div>
+
+      <h3>For Function Component</h3>
+
+      <p>
+        If we want to isolate state management form the component. We call this
+        components as a stateless. React.Component re-renders itself every time
+        the props passed to it changes, parent component re-renders or if the
+        shouldComponentUpdate() method is called. It doesn't optimize the React
+        application.
+      </p>
+
+      <br />
+      <!-- Question 2 -->
+      <h2>Question 2</h2>
+
+      <div class="question-2">
+        Write a JavaScript program to sort the items of an array. (without using
+        built-in methods e.g. sort())
+
+        <!-- Example -->
+        <div class="example">
+          // Question 2 let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1]; <br />
+          // Expected Array = arr2 = [-4,1,2,3,5,6,7]; br function
+          sortArray(array) { <br />
+          let done = false; <br />
+
+          while (!done) {<br />
+          done = true;<br />
+
+          for (let i = 1; i < array.length; i += 1) {<br />
+          if (array[i - 1] > array[i]) {<br />
+          done = false;<br />
+          let temporary = array[i - 1];<br />
+          array[i - 1] = array[i];<br />
+          array[i] = temporary;<br />
+          }<br />
+          }<br />
+          }<br />
+          return array;<br />
+          }<br />
+
+          sortArray(numbers);<br />
+          console.log(numbers);<br />
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <h2>Question 3</h2>
+      <div class="question-3">
+        What is a Babel Compiler?
+
+        <div class="answer-3">
+          Babel Transcompiler is mainly used to convert ES2015 code into older
+          or backwards version of JavaScript in current and older browsers.
+          Babel can automatically inject pollyfills provided by core-js.
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <br />
+      <h2>Question 4</h2>
+
+      <div class="question-4">
+        Write a JavaScript program to find the most frequent item of an array
+
+        <div class="answer-4">
+          let firstArray = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+          <br />
+          let mostFrequent = 1; <br />
+          let index = 0;<br />
+          var item;<br />
+          for (let i = 0; i < firstArray.length; i++) {<br />
+          for (let j = i; j < firstArray.length; j++) {<br />
+          if (firstArray[i] == firstArray[j]) index++;<br />
+          if (mostFrequent < index) {<br />
+          mostFrequent = index;<br />
+          item = firstArray[i];<br />
+          }<br />
+          }<br />
+          index = 0;<br />
+          }<br />
+          console.log(`${item} (${mostFrequent} times)`);<br />
+          <strong>a (5 times)</strong>
+        </div>
+      </div>
+
+      <br />
+      <h2>Question 5</h2>
+
+      <div class="question-5">
+        this.state.message <br />
+        this.setState() - doesn't work with constructors in ES6 Classes, so we
+        have to use this.state.message <br />
+        this.setState() is better then force update
+        <br />
+        this.setState() doesn't immediately mutate this.state, but creates a
+        state transition. <br />
+        Accessing this.state after calling this method can return the existing
+        value
+        <br />
+        this.seState might be asynchronous
+      </div>
+
+      <br />
+      <h2>Question 6</h2>
+      <div class="question-6">
+        Iterate through object “obj” to find respectivelly all values of
+        property 'find'.
+      </div>
+    </div>
+  </body>
+</html>
